@@ -1,0 +1,66 @@
+.jumbotron {
+    background-image: url("../images/quen_logo copy.png");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    padding: 20px;
+    background-color: orange;
+    background-position: center; 
+    margin-bottom: 0;
+  }
+body {
+    background-image: url("../images/quen_mono.png");
+    background-color: blue;
+    background-size: 20%;
+}
+.container {
+    background-color:white;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.error input {
+    border-color: #dc3545;;
+}
+
+.success input {
+    border-color:  #28a745;
+}
+
+
+small {
+    color: #dc3545;;
+}
+
+fieldset {
+    background-color: rgb(149, 183, 255);
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+form {
+    padding-bottom: 15px;
+}
+
+.receipt{
+    background-color: rgb(149, 183, 255);
+    border-radius: 5px;
+    padding: 10px;
+}
+#divPrice, #divOrder{
+    background-color:white;
+    border-radius: 5px;
+    padding: 5px;
+  
+}
+
+#divPrice {
+    margin-bottom: 10px;
+}
+#pizzaCheckboxes{
+    margin-left: 5px;
+}
+
+button#btnFinish {
+    background-color: orange;
+    border-color: orange;
+}

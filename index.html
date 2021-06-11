@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    
+    <link href="css/base.css" rel="stylesheet">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+
+    <div class="container-fluid" style="padding: 0;">
+
+      <div class="jumbotron">
+        <div class="banner">
+          <br><br><br><br><br>
+        </div>
+    </div>
+    <nav class="navbar navbar-light bg-light">
+        <button id="btnOrder" class=" btn btn-primary ms-auto link-light">Start Your Order</button>
+   </nav>
+    
+       
+        <div class ="container">
+          <div class="row" >
+            <div class="col-8">
+              <form  id="orderForm" >
+                <fieldset id="fldPersonal">
+                  <legend>Personal Information</legend>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="username"  placeholder="Quennie Kitchen">
+                        <small></small>
+                      </div>
+
+                    <div class="mb-3">
+                      <label for="email" class="form-label">Email address</label>
+                      <input type="text" class="form-control" id="email" aria-describedby="emailHelp" placeholder=" quennieKitchen@abc.com">
+                      <div id="emailHelp" class="form-text"></div>
+                      <small></small>
+                    </div> 
+
+                    <div class="mb-3">
+                      <label for="addType" class="form-label">Address Type</label>
+                      <select id="addType" class="form-select " aria-label="Select Address Type">
+                        <option value="1" selected>House</option>
+                        <option value="2">Apartment</option>
+                        <option value="3">Business</option>
+                        <option value="1">Campus</option>
+                        <option value="2">Hotel</option>
+                        <option value="3">Dorm</option>
+                        <option value="other">Other</option>
+                      </select> 
+                    </div>
+                    <div class="mb-3" id="otherText">
+
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="streetAdd" class="form-label">Street Address</label>
+                      <input id="streetAdd" class="form-control" type="text"  aria-label="default input" placeholder="1 Abc Street">
+                      <small></small>
+                    </div>
+
+                    <div class="row"> 
+
+                      <div class="mb-3 col-6">
+                        <label for="aptStRoom" class="form-label">Apt / Ste / Room</label>
+                        <select id="aptStRoom" class="form-select " aria-label=".form-select-lg" >
+                          <option value="1" selected>Apartment </option>
+                          <option value="2">Suite</option>
+                          <option value="3">Room </option>                    
+                        </select> 
+                      </div>
+
+                      <div class="mb-3 col-6">
+                        <label for="aptStFloor" class="form-label">Apt / Ste / Floor</label>
+                        <input id="aptStFloor" class="form-control" type="text"  aria-label="default input " placeholder="Apt / Ste / Room"> 
+                        <small></small>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="city" class="form-label">City</label>
+                      <input id="city" class="form-control" type="text" placeholder="City">
+                      <small></small>
+                    </div>
+                    <div class="row">
+
+                      <div class="mb-3 col-6">
+                        <label for="state" class="form-label">State </label>
+                        <input id="state" class="form-control" type="text" placeholder="AB">
+                        <small></small>
+                      </div>
+                     
+                      <div class="mb-3 col-6">
+                        <label for="zip" class="form-label">Zip Code</label>
+                        <input id="zip" class="form-control" type="text" placeholder="12345">
+                        <small></small>
+                      </div>
+
+                    </div>
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input id="phone" class="form-control" type="text" placeholder="000-000-0000">
+                      <small></small>
+                    </div>
+
+              </fieldset>
+              <fieldset id ="fldPizza">
+                <legend>Build Your Pizza</legend>
+                <div id="rdWrapper">
+                    <div class="form-check">
+                      <input class="form-check-input" value="Hand Tossed" type="radio" name="rdPizzaType" id="rdHandToss" >
+                      <label class="form-check-label" for="rdHandToss">
+                        Hand Tossed
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" value="Thin Crust" type="radio" name="rdPizzaType" id="rdThinCrust" >
+                      <label class="form-check-label" for="rdThinCrust">
+                        Thin Crust
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" value="New York Style" type="radio" name="rdPizzaType" id="rdNY">
+                      <label class="form-check-label" for="rdNY">
+                      New York Style
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" value="Gluten Free" type="radio" name="rdPizzaType" id="rdGF" >
+                      <label class="form-check-label" for="rdGF">
+                        Gluten Free
+                      </label>
+                    </div>
+                    <small></small>
+                    <br />
+                </div>
+                <div class="mb-3 ">             
+                  <select class="form-select" aria-label="Default select example" id="selSize">
+                    <option value = "0.0" selected >Choose the size</option>
+                  </select>
+                  <small></small>
+                </div>  
+
+                <div id="optional">
+                  <div class="mb-3 ">
+                    <label for="selCheese" class="form-label">Select Cheese</label>             
+                    <select class="form-select" aria-label="Choose Cheese Options" id="selCheese">
+                      <option value = "1" selected >Light: No charge</option>
+                      <option value = "2"  >Normal (default): no charge</option>
+                      <option value = "3"  >Extra: +$2.99</option>
+                      <option value = "4"  >Double: +$3.99</option>
+                    </select>
+                    <small></small>
+                  </div>    
+                  <div class="mb-3 ">   
+                    <label for="selSauce" class="form-label">Select Sauce</label>            
+                    <select class="form-select" aria-label="Choose Sauce Options" id="selSauce">
+                      <option value = "1" selected >Regular Tomato: no charge</option>
+                      <option value = "2"  >Hearty Tomato: +$.99</option>
+                      <option value = "3"  >BBQ Sauce: +$1.99</option>
+                    </select>
+                    <small></small>
+                  </div> 
+                
+                  <div class="row" id = "pizzaCheckboxes"> 
+                    <br/>
+                    <p>Add each topping for $.99 extra</p>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="peppers" name="toppings" id="flexChkPeppers">
+                      <label class="form-check-label" for="flexChkPeppers">
+                        peppers
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="olives" name="toppings" id="flexChkOlives" >
+                      <label class="form-check-label" for="flexChkOlives">
+                        olives
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="jalapenos" name="toppings" id="flexChkJalapenos">
+                      <label class="form-check-label" for="flexChkJalapenos">
+                        jalapenos
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="mushrooms" name="toppings" id="flexChkMushroom" >
+                      <label class="form-check-label" for="flexChkMushroom">
+                        mushrooms
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="pineapple" name="toppings" id="flexChkPine">
+                      <label class="form-check-label" for="flexChkPine">
+                        pineapple
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="onion" name="toppings" id="flexChkOnion" >
+                      <label class="form-check-label" for="flexChkOnion">
+                        onion
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="peppperoni" name="toppings" id="flexChkPepperoni">
+                      <label class="form-check-label" for="flexChkPepperoni">
+                        pepperoni
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="sausage" name="toppings" id="flexChkSausage" >
+                      <label class="form-check-label" for="flexChkSausage">
+                        sausage
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="ham" name="toppings" id="flexChkHam" >
+                      <label class="form-check-label" for="flexChkHam">
+                        ham
+                      </label>
+                    </div>
+                    <div class="form-check col-6">
+                      <input class="form-check-input" type="checkbox" value="bacon" name="toppings" id="flexChkBacon" >
+                      <label class="form-check-label" for="flexChkBacon">
+                        bacon
+                      </label>
+                    </div>
+
+                    <br/>
+  
+                  </div>
+                
+                </div>
+
+              </fieldset>
+
+
+                
+
+
+                <button type="submit" id="btnFinish" class="btn btn-primary" >Done with Pizza!</button>
+             
+              </form>
+              <form id="creditForm">
+                <fieldset id = "fldCredit">
+                  <legend>Billing Information</legend>
+  
+                    
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="sameAdd">
+                      <label class="form-check-label" for="sameAdd">Same as delivery information</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="usernameBill" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="usernameBill"  placeholder="Quennie Kitchen">
+                        <small></small>
+                      </div>
+  
+                    <div class="mb-3">
+                      <label for="emailBill" class="form-label">Email address</label>
+                      <input type="text" class="form-control" id="emailBill" aria-describedby="emailHelp" placeholder=" quennieKitchen@abc.com">
+                      <div id="emailHelpBill" class="form-text"></div>
+                      <small></small>
+                    </div> 
+  
+                    <div class="mb-3">
+                      <label for="addTypeBill" class="form-label">Address Type</label>
+                      <select id="addTypeBill" class="form-select " aria-label="Select Address Type">
+                        <option value="1" selected>House</option>
+                        <option value="2">Apartment</option>
+                        <option value="3">Business</option>
+                        <option value="1">Campus</option>
+                        <option value="2">Hotel</option>
+                        <option value="3">Dorm</option>
+                        <option value="other">Other</option>
+                      </select> 
+                    </div>
+                    <div class="mb-3" id="otherTextBill">
+  
+                    </div>
+  
+                    <div class="mb-3">
+                      <label for="streetAddBill" class="form-label">Street Address</label>
+                      <input id="streetAddBill" class="form-control" type="text" placeholder="Default input" aria-label="default input" placeholder="1 Abc Street">
+                      <small></small>
+                    </div>
+  
+                    <div class="row"> 
+  
+                      <div class="mb-3 col-6">
+                        <label for="aptStRoomBill" class="form-label">Apt / Ste / Room</label>
+                        <select id="aptStRoomBill" class="form-select " aria-label=".form-select-lg">
+                          <option value="1" selected>Apartment No.</option>
+                          <option value="2">Suite.</option>
+                          <option value="3">Room N.</option>                    
+                        </select> 
+                      </div>
+  
+                      <div class="mb-3 col-6">
+                        <label for="aptStFloorInputBill" class="form-label">Apt / Ste / Floor</label>
+                        <input id="aptStFloorInputBill" class="form-control" type="text"  aria-label="default input " placeholder="Apt / Ste / Room">
+                        <small></small>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="cityBill" class="form-label">City</label>
+                      <input id="cityBill" class="form-control" type="text" placeholder="City" >
+                      <small></small>
+                    </div>
+                    <div class="row">
+  
+                      <div class="mb-3 col-6">
+                        <label for="stateBill" class="form-label">State</label>
+                        <input id="stateBill" class="form-control" type="text" placeholder="AB">
+                        <small></small>
+                      </div>
+                     
+                      <div class="mb-3 col-6">
+                        <label for="zipBill" class="form-label">Zip Code</label>
+                        <input id="zipBill" class="form-control" type="text" placeholder="12345">
+                        <small></small>
+                      </div>
+  
+                    </div>
+                    <div class="mb-3">
+                      <label for="phoneBill" class="form-label">Phone Number</label>
+                      <input id="phoneBill" class="form-control" type="text" placeholder="000-000-0000">
+                      <small></small>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="cardNo" class="form-label">Credit Card No</label>
+                      <input id="cardNo" class="form-control" type="text" >
+                      <small></small>
+                      <span id="cardType"></span>
+                      
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="cvc" class="form-label">CVC code</label>
+                      <input id="cvc" class="form-control" type="text" >
+                      <small></small>
+                    </div>
+
+                    <div class="row"> 
+                      <label class="form-label"> Expiry Date: </label>
+                      <div class="mb-3 col-4">
+                       
+                        <select id="expiryMonth" class="form-select col-6">
+                            <option selected> Month </option>
+                            <option>01</option>
+                            <option>02</option>
+                            <option>03</option>
+                            <option>04</option>
+                            <option>05</option>
+                            <option>06</option>
+                            <option>07</option>
+                            <option>08</option>
+                            <option>09</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                        </select>
+                        <small></small>
+                        </div>
+                        <div class="mb-3 col-4">
+                        <select id="expiryYear" class="form-select col-6 ">
+                            <option selected>Year</option>
+                            <option>2021</option>
+                            <option>2022</option>
+                            <option>2023</option>
+                            <option>2024</option>
+                            <option>2025</option>
+                            <option>2026</option>
+                            <option>2027</option>
+                            <option>2028</option>
+                            <option>2029</option>
+                            <option>2030</option>
+                            <option>2031</option>
+                            <option>2032</option>
+                           
+                        </select>
+                        <small></small>
+                      </div>
+                      
+                  </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+  
+              </fieldset>
+
+              </form>
+              <form id="confirmedForm">
+                <div class="mb-3">
+                  <p>Your Order is confirmed thanks!</p>
+                </div>
+              </form>
+
+            </div>
+
+              <!-- RIGHT STICKY -->
+              <div class="col-4">
+                <div class=" sticky-top receipt">
+                  <div id="divPrice">
+                    <p>Total Price: 0.0</p>
+                  </div>
+
+                  
+                  <div  >
+                    <p class="text-break" id="divOrder">Your Order:</p>
+                    
+                  </div>
+                </div>
+                
+
+              </div>
+
+        </div>
+        
+      </div>
+
+
+
+    </div>
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
